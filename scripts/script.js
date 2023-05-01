@@ -18,12 +18,14 @@ function loadHTML(index) {
   </article>
   `;
 
-  document.querySelector('.booklist-container').innerHTML = superHTML;
+  document.querySelector('.booklist-container').insertAdjacentHTML("beforeend", superHTML);
 }
 
 function loadBooks() {
   const booksAmount = books.length;
+  const emptyHTML = "";
 
+  document.querySelector('.booklist-container').innerHTML = emptyHTML;
   for (let i = 0; i < booksAmount; i += 1) {
     loadHTML(i);
   }
@@ -36,6 +38,8 @@ function addBook(bookTitle, bookAuthor) {
   };
   books.push(newBook);
 
+  newTitle.value = '';
+  newAuthor.value = '';
   loadBooks();
 };
 
