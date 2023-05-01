@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="/img/banner.jpg" alt="logo" />
   <br/>
 
-  <h1><b>First-Capstone</b></h1>
+  <h1><b>Awesome-books</b></h1>
 
 </div>
 
@@ -57,11 +57,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [First-Capstone] <a name="about-project"></a>
+# 📖 [Awesome-books] <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
-**[First-Capstone]** is a project that I created in the 5th week of the program during Module 1
+**[Awesome-books]** is a project that makes a list of your favorite books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -76,7 +76,6 @@ After you're finished please remove all the comments and instructions!
     <li>HTML</li>
     <li>CSS</li>
     <li>Javascript</li>
-    <li>Bootstrap</li>
     <li>Github pages</li>
   </ul>
 </details>
@@ -101,9 +100,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Describe between 1-3 key features of the application. -->
 
-- **[UI design implementing design guidelines]**
+- **[Use medium-fidelity warframe to build the project]**
 - **[Responsive design for multiple screens]**
-- **[Use of javascript to render the speaker section]**
+- **[Use of javascript to change the content of the page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,8 +112,8 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- [Demo page](https://victormc13.github.io/First-Capstone/index.html)
-- [First-Capstone video](https://loom.com/share/e8b9ae68f1584c9bb0ddd59182e3236e)
+- [Demo page](No available)
+<!-- - []() -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,7 +264,7 @@ If you like this project you can reach out with me in [viktorsb14@gmail.com](htt
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 <!-- > Give credit to everyone who inspired your codebase. -->
-I would like to thank Microverse for giving us this opportunity and to [Cindy Shin in Behance](https://www.behance.net/adagio07) for her really cool design that I take as inspiration for this project.
+I would like to thank Microverse for giving us this opportunity.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

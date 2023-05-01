@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AwesomeBooks</title>
+  </head>
+  <body>
+    <header style="display: none">
+      <span class="logo">
+        <a href="#">Awesome Books</a>
+      </span>
+      <nav>
+        <ul>
+          <li><a href="#">List</a></li>
+          <li><a href="#">Add New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Awesome books</h1>
+
+      <section class="booklist-container section">
+        <article class="book">
+          <h4>Title</h4>
+          <p>Author</p>
+          <button class="remove-button">Remove</button>
+        </article>
+        <article class="book">
+          <h4>Title2</h4>
+          <p>Author2</p>
+          <button class="remove-button">Remove</button>
+        </article>
+      </section>
+
+      <form action="/" class="section">
+        <div class="user-input">
+          <input type="text" name="title" id="new-title" placeholder="Title" />
+        </div>
+        <div class="user-input">
+          <input
+            type="text"
+            name="author"
+            id="new-author"
+            placeholder="Author"
+          />
+        </div>
+        <button class="btn" id="add-button">Add</button>
+      </form>
+    </main>
+  </body>
+</html>
