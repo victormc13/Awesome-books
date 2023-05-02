@@ -1,15 +1,15 @@
 let books = [
   {
-    title: "title1",
-    author: "autor1",
+    title: 'title1',
+    author: 'autor1',
   },
   {
-    title: "title2",
-    author: "autor2",
+    title: 'title2',
+    author: 'autor2',
   },
   {
-    title: "Dune",
-    author: "Frank Herbert",
+    title: 'Dune',
+    author: 'Frank Herbert',
   },
 ];
 
@@ -23,39 +23,39 @@ function loadHTML(index) {
   `;
 
   document
-    .querySelector(".booklist-container")
-    .insertAdjacentHTML("beforeend", superHTML);
+    .querySelector('.booklist-container')
+    .insertAdjacentHTML('beforeend', superHTML);
   document
-    .getElementById("remove-button" + index)
-    .addEventListener("click", () => removeBook(index));
+    .getElementById(`remove-button${index}`)
+    .addEventListener('click', () => removeBook(index)); // eslint-disable-line no-use-before-define
 }
 
 function loadBooks() {
   const booksAmount = books.length;
-  const emptyHTML = "";
+  const emptyHTML = '';
 
-  document.querySelector(".booklist-container").innerHTML = emptyHTML;
+  document.querySelector('.booklist-container').innerHTML = emptyHTML;
   for (let i = 0; i < booksAmount; i += 1) {
     loadHTML(i);
   }
 
-  localStorage.setItem("books", JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(books));
 }
-let localbooks = localStorage.getItem("books");
+const localbooks = localStorage.getItem('books');
 if (localbooks) {
   books = JSON.parse(localbooks);
 }
 
 function addBook(bookTitle, bookAuthor) {
-  if (bookTitle !== "" && bookAuthor !== "") {
-    let newBook = {
+  if (bookTitle !== '' && bookAuthor !== '') {
+    const newBook = {
       title: bookTitle,
       author: bookAuthor,
     };
     books.push(newBook);
 
-    newTitle.value = "";
-    newAuthor.value = "";
+    newTitle.value = ''; // eslint-disable-line no-use-before-define
+    newAuthor.value = ''; // eslint-disable-line no-use-before-define
     loadBooks();
   }
 }
@@ -66,11 +66,9 @@ function removeBook(index) {
   loadBooks();
 }
 
-window.addEventListener("load", loadBooks());
-const addButton = document.getElementById("add-button");
-const newTitle = document.getElementById("new-title");
-const newAuthor = document.getElementById("new-author");
+window.addEventListener('load', loadBooks());
+const addButton = document.getElementById('add-button');
+const newTitle = document.getElementById('new-title');
+const newAuthor = document.getElementById('new-author');
 
-addButton.addEventListener("click", () =>
-  addBook(newTitle.value, newAuthor.value)
-);
+addButton.addEventListener('click', () => addBook(newTitle.value, newAuthor.value));

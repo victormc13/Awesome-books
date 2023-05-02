@@ -21,7 +21,7 @@ main {
 }  */
 
 h1 {
-  padding: 2rem;  
+  padding: 2rem;
 }
 
 .book {
@@ -33,6 +33,7 @@ form {
   padding: 1rem;
 }
 
-input, form button {
+input,
+form button {
   margin-top: 1rem;
 }
