@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+} */
+
+main {
+  padding: 0.5rem;
+}
+
+/* ul {
+  display: flex;
+  justify-content: flex-end;
+}  */
+
+h1 {
+  padding: 2rem;
+}
+
+.book {
+  padding: 1rem;
+  border-bottom: 1px solid #535353;
+}
+
+form {
+  padding: 1rem;
+}
+
+input,
+form button {
+  margin-top: 1rem;
+}
