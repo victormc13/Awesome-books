@@ -1,3 +1,6 @@
+const newTitle = document.getElementById('new-title'); // eslint-disable-line max-classes-per-file
+const newAuthor = document.getElementById('new-author');
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -9,39 +12,39 @@ class Library {
   constructor() {
     this.books = [
       {
-        title: "title1",
-        author: "autor1",
+        title: 'title1',
+        author: 'autor1',
       },
       {
-        title: "title2",
-        author: "autor2",
+        title: 'title2',
+        author: 'autor2',
       },
       {
-        title: "Dune",
-        author: "Frank Herbert",
+        title: 'Dune',
+        author: 'Frank Herbert',
       },
     ];
   }
 
   addBook(bookTitle, bookAuthor) {
-    if (bookTitle !== "" && bookAuthor !== "") {
-      let newBook = new Book(bookTitle, bookAuthor);
+    if (bookTitle !== '' && bookAuthor !== '') {
+      const newBook = new Book(bookTitle, bookAuthor);
       this.books.push(newBook);
-  
-      newTitle.value = "";
-      newAuthor.value = "";
-      loadBooks();
+
+      newTitle.value = '';
+      newAuthor.value = '';
+      loadBooks(); // eslint-disable-line no-use-before-define
     }
   }
 
   removeBook(index) {
     this.books.splice(index, 1);
-  
-    loadBooks();
+
+    loadBooks(); // eslint-disable-line no-use-before-define
   }
 }
 
-const superLibrary = new Library;
+const superLibrary = new Library();
 
 function loadHTML(index) {
   const superHTML = `
@@ -52,30 +55,28 @@ function loadHTML(index) {
   </li>
   `;
 
-  document.querySelector(".booklist-container").insertAdjacentHTML("beforeend", superHTML);
-  document.getElementById("remove-button" + index).addEventListener("click", () => superLibrary.removeBook(index));
+  document.querySelector('.booklist-container').insertAdjacentHTML('beforeend', superHTML);
+  document.getElementById(`remove-button${index}`).addEventListener('click', () => superLibrary.removeBook(index));
 }
 
 function loadBooks() {
   const booksAmount = superLibrary.books.length;
-  const emptyHTML = "";
+  const emptyHTML = '';
 
-  document.querySelector(".booklist-container").innerHTML = emptyHTML;
+  document.querySelector('.booklist-container').innerHTML = emptyHTML;
   for (let i = 0; i < booksAmount; i += 1) {
     loadHTML(i);
   }
 
-  localStorage.setItem("books", JSON.stringify(superLibrary.books));
+  localStorage.setItem('books', JSON.stringify(superLibrary.books));
 }
 
-let localbooks = localStorage.getItem("books");
+const localbooks = localStorage.getItem('books');
 if (localbooks) {
   superLibrary.books = JSON.parse(localbooks);
 }
 
-window.addEventListener("load", loadBooks());
-const addButton = document.getElementById("add-button");
-const newTitle = document.getElementById("new-title");
-const newAuthor = document.getElementById("new-author");
+window.addEventListener('load', loadBooks());
+const addButton = document.getElementById('add-button');
 
-addButton.addEventListener("click", () => superLibrary.addBook(newTitle.value, newAuthor.value));
+addButton.addEventListener('click', () => superLibrary.addBook(newTitle.value, newAuthor.value));
