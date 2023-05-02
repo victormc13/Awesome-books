@@ -1,74 +1,81 @@
-let books = [
-  {
-    title: 'title1',
-    author: 'autor1',
-  },
-  {
-    title: 'title2',
-    author: 'autor2',
-  },
-  {
-    title: 'Dune',
-    author: 'Frank Herbert',
-  },
-];
-
-function loadHTML(index) {
-  const superHTML = `
-  <li class="book">
-    <h4 id="">${books[index].title}</h4>
-    <p id="">${books[index].author}</p>
-    <button id="remove-button${index}">Remove</button>
-  </li>
-  `;
-
-  document
-    .querySelector('.booklist-container')
-    .insertAdjacentHTML('beforeend', superHTML);
-  document
-    .getElementById(`remove-button${index}`)
-    .addEventListener('click', () => removeBook(index)); // eslint-disable-line no-use-before-define
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 }
 
-function loadBooks() {
-  const booksAmount = books.length;
-  const emptyHTML = '';
-
-  document.querySelector('.booklist-container').innerHTML = emptyHTML;
-  for (let i = 0; i < booksAmount; i += 1) {
-    loadHTML(i);
+class Library {
+  constructor() {
+    this.books = [
+      {
+        title: "title1",
+        author: "autor1",
+      },
+      {
+        title: "title2",
+        author: "autor2",
+      },
+      {
+        title: "Dune",
+        author: "Frank Herbert",
+      },
+    ];
   }
 
-  localStorage.setItem('books', JSON.stringify(books));
-}
-const localbooks = localStorage.getItem('books');
-if (localbooks) {
-  books = JSON.parse(localbooks);
-}
+  addBook(bookTitle, bookAuthor) {
+    if (bookTitle !== "" && bookAuthor !== "") {
+      let newBook = new Book(bookTitle, bookAuthor);
+      this.books.push(newBook);
+  
+      newTitle.value = "";
+      newAuthor.value = "";
+      loadBooks();
+    }
+  }
 
-function addBook(bookTitle, bookAuthor) {
-  if (bookTitle !== '' && bookAuthor !== '') {
-    const newBook = {
-      title: bookTitle,
-      author: bookAuthor,
-    };
-    books.push(newBook);
-
-    newTitle.value = ''; // eslint-disable-line no-use-before-define
-    newAuthor.value = ''; // eslint-disable-line no-use-before-define
+  removeBook(index) {
+    this.books.splice(index, 1);
+  
     loadBooks();
   }
 }
 
-function removeBook(index) {
-  books.splice(index, 1);
+const superLibrary = new Library;
 
-  loadBooks();
+function loadHTML(index) {
+  const superHTML = `
+  <li class="book">
+    <h4 id="">${superLibrary.books[index].title}</h4>
+    <p id="">${superLibrary.books[index].author}</p>
+    <button id="remove-button${index}">Remove</button>
+  </li>
+  `;
+
+  document.querySelector(".booklist-container").insertAdjacentHTML("beforeend", superHTML);
+  document.getElementById("remove-button" + index).addEventListener("click", () => superLibrary.removeBook(index));
 }
 
-window.addEventListener('load', loadBooks());
-const addButton = document.getElementById('add-button');
-const newTitle = document.getElementById('new-title');
-const newAuthor = document.getElementById('new-author');
+function loadBooks() {
+  const booksAmount = superLibrary.books.length;
+  const emptyHTML = "";
 
-addButton.addEventListener('click', () => addBook(newTitle.value, newAuthor.value));
+  document.querySelector(".booklist-container").innerHTML = emptyHTML;
+  for (let i = 0; i < booksAmount; i += 1) {
+    loadHTML(i);
+  }
+
+  localStorage.setItem("books", JSON.stringify(superLibrary.books));
+}
+
+let localbooks = localStorage.getItem("books");
+if (localbooks) {
+  superLibrary.books = JSON.parse(localbooks);
+}
+
+window.addEventListener("load", loadBooks());
+const addButton = document.getElementById("add-button");
+const newTitle = document.getElementById("new-title");
+const newAuthor = document.getElementById("new-author");
+
+addButton.addEventListener("click", () => superLibrary.addBook(newTitle.value, newAuthor.value));
