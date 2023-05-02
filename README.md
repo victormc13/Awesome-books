@@ -197,6 +197,12 @@ Example:
 - Twitter: [@fdezcaminero](https://twitter.com/fdezcaminero)
 - LinkedIn: [José Fernández-Caminero](https://www.linkedin.com/in/fdezcaminero/)
 
+👤 **Vishal Mishra**
+
+- GitHub  | [@Vishal30M](https://github.com/Vishal30M)
+- Twitter | [@Vismiss30](https://twitter.com/Vismiss30)
+- LinkdIn | [vishal-kumar-mishra](https://www.linkedin.com/in/vishal-kumar-mishra-0a5226232/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
