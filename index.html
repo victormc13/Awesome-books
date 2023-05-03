@@ -12,23 +12,20 @@
       <nav>
         <span>Awesome Books</span>
         <div>
-          <a id="list">List</a>
-          <a id="addnew">Add new</a>
-          <a id="contact">Contact</a>
+          <a href="#" onclick="showSection('section1')">List</a>
+          <a href="#" onclick="showSection('section2')">Add new</a>
+          <a href="#" onclick="showSection('section3')">Contact</a>
         </div>
-        
       </nav>
     </header>
     <main>
       <h1>Awesome books</h1>
 
-      <section class="">
+      <section id="section1">
         <ul class="booklist-container"></ul>
       </section>
 
-      <div class="line"></div>
-
-      <section class="display-none addbook-section">
+      <section id="section2" class="addbook-section">
         <h2>Add a book</h2>
         <div class="user-input">
           <input type="text" name="title" id="new-title" placeholder="Title" />
@@ -39,7 +36,7 @@
         <button class="btn" id="add-button">Add</button>
       </section>
 
-      <section class="contact-section display-none">
+      <section id="section3" class="contact-section">
         <h1>Contact information</h1>
         <p>Do you have any questions or you just want to say "Hello"?
           You can reach out to us!

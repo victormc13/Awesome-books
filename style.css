@@ -39,11 +39,15 @@ main {
 main .addbook-section {
   width: 400px;
   margin-top: 1rem;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
+
+/* .display-flex {
+  display: flex;
+} */
 
 .addbook-section input {
   width: 400px;
@@ -88,19 +92,17 @@ li:nth-child(odd) {
   gap: 1rem;
 }
 
-.line {
-  width: 400px;
-  margin: 30px auto 0;
-  border-bottom: 2px solid black;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-block {
+/* #section1 {
   display: block;
 }
+
+#section2, #section3 {
+  display: none;
+} */
+
+/* section {
+  display: block;
+} */
 
 footer {
   padding: 1rem;
