@@ -6,11 +6,54 @@
   list-style: none;
 }
 
+header {
+  padding: 2rem;
+  margin: 1rem;
+  border: 2px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: black;
+}
+
+a:active {
+  color: blue;
+}
+
+nav div a:nth-child(2) {
+  padding: 0 1rem;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+a[tabindex]:focus {
+  color: blue;
+  outline: none;
+}
+
 main {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.date {
+  text-align: right;
+  padding-right: 16px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 main .addbook-section {
@@ -65,12 +108,18 @@ li:nth-child(odd) {
   gap: 1rem;
 }
 
-.line {
-  width: 400px;
-  margin: 30px auto 0;
-  border-bottom: 2px solid black;
+.user-input {
+  margin: 20px 0;
 }
 
-form {
+.hidden {
+  display: none;
+}
+
+footer {
   padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 2px solid black;
 }
