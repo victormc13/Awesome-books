@@ -6,6 +6,29 @@
   list-style: none;
 }
 
+header {
+  padding: 2rem;
+  margin: 1rem;
+  border: 2px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+nav div {
+  display: flex;
+  gap: 1rem;
+}
+
+nav div a:nth-child(2) {
+  padding: 0 1rem;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
 main {
   padding: 0.5rem;
   display: flex;
@@ -71,6 +94,18 @@ li:nth-child(odd) {
   border-bottom: 2px solid black;
 }
 
-form {
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+footer {
   padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 2px solid black;
 }
