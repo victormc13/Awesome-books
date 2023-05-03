@@ -11,22 +11,22 @@
     <main>
       <h1>Awesome books</h1>
 
-      <section class="booklist-container section">
-        
+      <section>
+        <ul class="booklist-container"></ul>
       </section>
 
+      <div class="line"></div>
+
+      <section class="addbook-section">
+        <h2>Add a book</h2>
         <div class="user-input">
           <input type="text" name="title" id="new-title" placeholder="Title" />
         </div>
         <div class="user-input">
-          <input
-            type="text"
-            name="author"
-            id="new-author"
-            placeholder="Author"
-          />
+          <input type="text" name="author" id="new-author" placeholder="Author" />
         </div>
         <button class="btn" id="add-button">Add</button>
+      </section>
     </main>
 
     <script src="scripts/script.js"></script>
