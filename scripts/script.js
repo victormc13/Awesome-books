@@ -87,37 +87,30 @@ const addButton = document.getElementById('add-button');
 
 addButton.addEventListener('click', () => superLibrary.addBook(newTitle.value, newAuthor.value));
 
-const list = document.getElementById('list');
-const addnew = document.getElementById('addnew');
-const contact = document.getElementById('contact');
-const sections = document.getElementsByTagName('section');
+const listLink = document.getElementById('list-link');
+const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
 
-function showSection(id) {
+function showSection(sectionId) {
+  const section1 = document.getElementById('books');
+  const section2 = document.getElementById('section2');
+  const section3 = document.getElementById('section3');
 
-  for(let i = 0; i < 3; i += 1) {
-    const superSection = `section${i}`;
-    superSection.style.display = 'none';
+  if (sectionId === 'section1') {
+    section1.classList.remove('hidden');
+    section2.classList.add('hidden');
+    section3.classList.add('hidden');
+  } else if (sectionId === 'section2') {
+    section1.classList.add('hidden');
+    section2.classList.remove('hidden');
+    section3.classList.add('hidden');
+  } else if (sectionId === 'section3') {
+    section1.classList.add('hidden');
+    section2.classList.add('hidden');
+    section3.classList.remove('hidden');
   }
-  
-  // let section = document.getElementById(id);
-  id.style.display = 'block';
 }
 
-// list.addEventListener('click', () => {
-//   section2.classList.remove('display-flex');
-//   section1.classList.add('display-block');
-//   section2.classList.add('display-none');
-//   section3.classList.add('display-none');
-// });
-
-// addnew.addEventListener('click', () => {
-//   section1.classList.remove('display-block');
-//   section2.classList.add('display-block');
-//   section3.classList.add('display-none');
-// });
-
-// contact.addEventListener('click', () => {
-//   section1.classList.add('display-none');
-//   section2.classList.add('display-none');
-//   section3.classList.add('display-block');
-// });
+listLink.addEventListener('click', () => showSection('section1'));
+addLink.addEventListener('click', () => showSection('section2'));
+contactLink.addEventListener('click', () => showSection('section3'));
